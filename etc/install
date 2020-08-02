@@ -1,0 +1,13 @@
+#!/bin/bash
+
+GIT_REPO="https://github.com/7agustibm/dotfiles.git"
+
+set -Xe
+
+cd ~
+
+git clone --recursive ${GIT_FLAGS} ${GIT_REPO} ~/.dotfiles
+
+cd ~/.dotfiles && $PYTHON install.py
+
+echo "All Done!"
